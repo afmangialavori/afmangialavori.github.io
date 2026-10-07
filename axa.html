@@ -1,0 +1,348 @@
+<!doctype html>
+<!-- Generado desde casos/axa/axa.md (versión 4) con el diseño de casos/geprom/geprom.html -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AXA Partners · Reporting comercial</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B132B; --card:#1C2541; --card-2:#232E4E; --line:#2C3A5E;
+    --blue:#3A86FF; --volt:#D4FF00;
+    --text:#FFFFFF; --muted:#A9B4C8; --dim:#7D8AA6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#060B1A;font-family:Inter,system-ui,sans-serif;color:var(--text);padding:28px 16px;font-size:13px;line-height:1.5}
+  .page{max-width:820px;margin:0 auto;background:var(--bg);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+
+  header{padding:28px 34px 22px}
+  .brand{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:20px}
+  .logo{font-weight:800;letter-spacing:.06em;font-size:14px;color:var(--text)}
+  .logo small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.1em;color:var(--blue);margin-top:2px}
+  .chip{background:var(--volt);color:var(--bg);font-weight:700;font-size:10.5px;padding:4px 11px;border-radius:999px}
+  .tag{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--volt);font-weight:700;margin-bottom:6px}
+  h1{font-size:24px;line-height:1.22;font-weight:800;max-width:640px}
+  .result{margin-top:16px;background:var(--card);border-left:3px solid var(--volt);border-radius:8px;padding:12px 16px;font-size:13.5px;color:var(--muted)}
+  .result b{color:var(--volt)}
+
+  /* Logo de la empresa (añadido) */
+  .brand{padding-bottom:20px;border-bottom:1px solid var(--line)}
+  .right{width:100%}
+  .rtop{display:flex;align-items:center;gap:20px}
+  .rtop .clogo{flex:none}
+  .about{flex:1;color:var(--muted);font-size:12.5px;line-height:1.55;padding-left:20px;border-left:1px solid rgba(255,255,255,.22)}
+  .about strong{color:var(--text);font-weight:600}
+  .clogo{background:#FFFFFF;border-radius:8px;padding:8px 14px;display:flex;align-items:center;justify-content:center}
+  .clogo img{height:36px;width:auto;display:block}
+
+  .meta{display:grid;grid-template-columns:1fr;gap:12px;padding:0 34px}
+  .box{background:var(--card);border-radius:10px;padding:13px 16px;color:var(--muted)}
+  h2{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--dim);font-weight:700;margin-bottom:6px}
+
+  .body{padding:18px 34px 6px;display:grid;grid-template-columns:1fr 1fr;gap:16px 28px}
+  .full{grid-column:1/-1}
+  section p, section li{color:var(--muted)}
+  ul{padding-left:16px} li{margin:3px 0} li::marker{color:var(--blue)}
+  ol{padding-left:18px} ol li{margin:3px 0} ol li::marker{color:var(--blue);font-weight:700}
+  .q{list-style:none;padding:0;columns:2;column-gap:28px}
+  .q li{position:relative;padding-left:16px;break-inside:avoid}
+  .q li::before{content:"?";position:absolute;left:0;color:var(--blue);font-weight:800}
+  strong{color:var(--text)}
+
+  .stack{background:var(--card);border-radius:12px;padding:15px 16px}
+  .flow{display:flex;align-items:stretch;gap:0}
+  .step{flex:1;background:var(--bg);border:1px solid rgba(255,255,255,.22);border-radius:9px;padding:10px;text-align:center}
+  .what strong{display:block;color:var(--text);font-weight:600;margin-bottom:3px}
+  .n{font-size:9.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
+  .tool{font-weight:700;margin:4px 0 2px;font-size:13px;color:var(--blue)}
+  .what{font-size:11.5px;color:var(--muted);line-height:1.35}
+  .arrow{width:20px;display:flex;align-items:center;justify-content:center;color:var(--blue);font-weight:700;flex:none}
+  .pills{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .pills .lbl{font-size:10.5px;color:var(--dim);margin-right:2px;text-transform:uppercase;letter-spacing:.08em}
+  .pill{font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--text)}
+
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .kpi{background:var(--card);border-radius:10px;padding:12px 14px}
+  .kpi .v{font-size:24px;font-weight:800;line-height:1.1;color:var(--text)}
+  .kpi.hl .v{color:var(--volt)}
+  .kpi .l{font-size:11.5px;color:var(--muted);margin-top:4px}
+
+  .concl{background:var(--card);border-left:3px solid var(--blue);border-radius:8px;padding:11px 15px;font-style:italic;color:var(--muted)}
+  footer{display:flex;justify-content:space-between;gap:12px;padding:13px 34px;border-top:1px solid var(--line);font-size:11.5px;color:var(--dim);margin-top:16px}
+  footer a{color:var(--blue);font-weight:600;text-decoration:none}
+
+  .ph{outline:1px dashed var(--volt);outline-offset:1px;border-radius:2px}
+
+  @media (max-width:640px){
+    header,.body,footer{padding-left:16px;padding-right:16px}.meta{padding:0 16px}.rtop{flex-direction:column;align-items:flex-start}.about{padding-left:0;border-left:0}
+    .meta,.body{grid-template-columns:1fr}
+    .flow{flex-direction:column}.arrow{width:auto;height:18px;transform:rotate(90deg)}
+    .kpis{grid-template-columns:1fr}.q{columns:1}footer{flex-direction:column}
+  }
+  @media print{body{background:var(--bg);padding:0}.page{border:0;border-radius:0}}
+
+  /* Versión texto largo (2026-10-06) */
+  .result p+p{margin-top:8px}
+  .box p+p,.box p+ul{margin-top:6px}
+  .lead{color:var(--text);font-weight:600}
+  ul.two{columns:2;column-gap:28px}
+  ul.two li{break-inside:avoid}
+  .sub{color:var(--text);font-weight:700;font-size:14px;margin-bottom:6px}
+  section p+p,section p+ul,section ul+p,section ol+p{margin-top:6px}
+  .close{color:var(--text);font-weight:600}
+  .center{text-align:center;margin:12px 0 0}
+  .intro{margin-bottom:12px}
+  ol.steps li{margin:0 0 8px}
+  ol.steps li strong{display:block;color:var(--text)}
+  ol.steps.grid{display:grid;grid-template-columns:1fr 1fr;column-gap:28px;padding-left:0;list-style:none;counter-reset:s}
+  ol.steps.grid li{counter-increment:s;position:relative;padding-left:24px}
+  ol.steps.grid li::before{content:counter(s);position:absolute;left:0;top:0;color:var(--blue);font-weight:800}
+  .q.three{columns:3}
+  .kpi .t{font-weight:700;color:var(--text);font-size:12.5px;margin-top:4px}
+  .cmp{display:flex;align-items:center;gap:10px;margin-top:8px}
+  .cl{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:700;width:58px;flex:none}
+  .chips{display:flex;flex-wrap:wrap;gap:5px;align-items:center;color:var(--dim);font-size:11px}
+  .cf{padding:2px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:var(--muted)}
+  .cmp.after .cl{color:var(--volt)}
+  .cmp.after .cf{border-color:var(--blue);color:var(--text)}
+  .concl p+p{margin-top:6px}
+  .cmp+p.close{margin-top:10px}
+  .step{min-width:0}.tool{overflow-wrap:break-word;hyphens:auto}
+  .concl strong{color:var(--text)}
+  @media (max-width:640px){ul.two,.q.three{columns:1}ol.steps.grid{grid-template-columns:1fr}.cmp{align-items:flex-start;flex-direction:column}}
+  /* ── Delimitación y aire entre temas (2026-10-06) ── */
+  header{padding-bottom:26px}
+  .meta{margin-bottom:6px}
+  .body{gap:20px;padding-top:20px;padding-bottom:10px}
+  .body > section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .body > section > h2, .box > h2{color:var(--blue);font-size:11px;letter-spacing:.12em;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .box{padding:18px 20px;border:1px solid var(--line);border-radius:12px}
+  .result{padding:16px 20px}
+  .kpi{background:var(--bg);border:1px solid var(--line)}
+  .flow .step{background:var(--bg)}
+  .body > section .concl{background:transparent;border-left:3px solid var(--blue);border-radius:0;padding:4px 0 4px 16px}
+  .close{margin-top:12px !important;padding-top:10px;border-top:1px dashed var(--line)}
+  .center.close{border-top:0;padding-top:0}
+  ol.steps li{margin-bottom:12px}
+  ol.steps.grid{row-gap:6px}
+  .q li{margin:4px 0}
+  .pills{margin-top:16px}
+  footer{margin-top:22px}  /* ── Ritmo continuo: mismo espacio (14px) entre todas las tarjetas ── */
+  .meta{margin-bottom:0}
+  .body{gap:14px;padding-top:14px}
+  .body > section > :last-child, .box > :last-child{margin-bottom:0}
+  ol.steps li:last-child{margin-bottom:0}
+  ol.steps.grid li{margin-bottom:10px}
+  ol.steps.grid{row-gap:0}  @media print{@page{size:A4;margin:0}.body>section,.box,.result,.kpi,.step{break-inside:avoid;page-break-inside:avoid}}
+  /* ── AXA v4: ficha, apartados numerados, bloques en columnas, flujos con chips (2026-10-07) ── */
+  .clogo.sq{padding:6px}
+  .clogo.sq img{height:56px}
+  .num{color:var(--blue);opacity:.65;margin-right:6px}
+  /* Ficha */
+  .ficha{display:grid;grid-template-columns:.8fr 1.6fr 1.1fr 1.5fr;gap:0;margin-top:16px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .ficha > div{padding:10px 14px;border-left:1px solid var(--line)}
+  .ficha > div:first-child{border-left:0}
+  .ficha .k{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:700;margin-bottom:3px}
+  .ficha .val{color:var(--text);font-weight:600;font-size:12.5px;line-height:1.35}
+  .result .rl{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--volt);font-weight:700;margin-bottom:6px}
+  /* Bloques en columnas (problema, qué permitió, resultados) */
+  .cols{display:grid;gap:12px}
+  .cols.c3{grid-template-columns:repeat(3,1fr)}
+  .cols.c2{grid-template-columns:repeat(2,1fr)}
+  .tile{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .tile .tt{color:var(--text);font-weight:700;font-size:13px;margin-bottom:6px;line-height:1.3}
+  .tile .tt .n2{display:block;color:var(--blue);font-size:10px;letter-spacing:.1em;margin-bottom:4px}
+  .tile p{font-size:12.5px}
+  .tile.hl .tt b{color:var(--volt);font-size:20px;margin-right:4px}
+  .cols.c5{grid-template-columns:repeat(6,1fr)}  .cols.c5 .tile{grid-column:span 2}  .cols.c5 .tile:nth-child(n+4){grid-column:span 3}
+  /* Flujos con chips */
+  .chain{display:flex;flex-wrap:wrap;gap:6px 6px;align-items:center;color:var(--dim);font-size:11.5px;margin:10px 0 12px}
+  .chain{flex-wrap:wrap;justify-content:center;gap:5px 4px;font-size:10.5px}  .chain .cf{padding:3px 8px;white-space:nowrap}
+  .chain.after .cf{border-color:var(--blue);color:var(--text)}
+  .chain.center{justify-content:center}
+  .cmpset{margin:10px 0 12px}
+  .cmpset .cmp:first-child{margin-top:0}
+  .cmp .plus{color:var(--dim);font-size:12px}
+  /* Proceso en 5 pasos y arquitectura en 7 capas */
+  .flow.five .step{text-align:left;padding:12px}
+  .flow.five .tool{font-size:12.5px;line-height:1.3;margin:4px 0 6px}
+  .flow.seven .step{padding:10px 6px;display:flex;align-items:center;justify-content:center}
+  .flow.seven .tool{font-size:11.5px;line-height:1.3;margin:0}
+  .flow.seven .step.end{border-color:var(--volt)}
+  .flow.seven .step.end .tool{color:var(--volt)}
+  .flow.seven .arrow{width:14px}
+  .stack .intro{margin-bottom:12px}
+  /* 04: definición común en 5 cajas iguales */
+  .flow.mini{margin:12px 0 14px}
+  .flow.mini .step{padding:10px 8px;display:flex;flex-direction:column;justify-content:center;border-color:var(--blue)}
+  .flow.mini .tool{font-size:12px;line-height:1.3;margin:3px 0 0;color:var(--text);font-weight:600}
+  .flow.mini .arrow{width:16px}
+  section .concl{margin-top:0}
+  @media (max-width:640px){.ficha{grid-template-columns:1fr 1fr}.ficha > div:nth-child(3){border-left:0}.cols.c3,.cols.c2,.cols.c5{grid-template-columns:1fr}.cols.c5 .tile,.cols.c5 .tile:nth-child(n+4){grid-column:auto}.chain{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<a class="backlink" href="index.html">← Volver al portfolio</a><style>.backlink{display:block;max-width:820px;margin:0 auto 10px;color:#3A86FF;font:600 12.5px Inter,system-ui,sans-serif;text-decoration:none}.backlink:hover{text-decoration:underline}@media print{.backlink{display:none}}</style>
+<div class="page">
+
+  <header>
+    <div class="brand">
+      <div class="right">
+        <div class="rtop">
+        <!-- [logo] empresa: versión original sobre tarjeta blanca -->
+        <div class="clogo sq"><img src="data:image/png;base64,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" alt="AXA"></div>
+        <!-- Sobre la empresa -->
+        <div class="about"><h2>Sobre la empresa</h2>Hub de consultoría y desarrollo de negocio del <strong>Grupo AXA</strong>. Capta y gestiona <strong>grandes clientes corporativos</strong> a nivel global para comercializar soluciones de asistencia, seguros de viaje y protección de crédito. Presencia en <strong>más de 40 países</strong> y <strong>más de 8.500 profesionales</strong>.</div>
+        </div>
+      </div>
+    </div>
+    <!-- categoría -->
+    <div class="tag">Business Data Analysis · Reporting comercial</div>
+    <!-- Título -->
+    <h1>Transformé un método comercial manual en un sistema automatizado de indicadores de negocio para la toma de decisiones</h1>
+<!-- 01 Resultado -->
+    <div class="result">
+      <div class="rl">Resultado</div>
+      <p>El negocio disponía de información comercial procedente de diferentes fuentes y equipos, pero convertir esos datos en información útil para decidir requería trabajo manual y diferentes interpretaciones según el área o mercado.</p>
+      <p>Mi trabajo permitió transformar ese proceso en una <b>solución estructurada de indicadores</b>, con datos centralizados, reglas de negocio comunes y dashboards orientados a la toma de decisiones comerciales.</p>
+    </div>
+  </header>
+
+  <div class="meta">
+    <!-- 02 Mi rol -->
+    <div class="box"><h2>Mi rol</h2>
+      <p class="sub">Conecté negocio, producto, datos y tecnología para convertir necesidades comerciales en soluciones funcionales</p>
+      <p>Como Data Business Analyst, actué como punto de conexión entre los equipos de negocio y tecnología.</p>
+      <p>Mi responsabilidad consistía en entender las necesidades comerciales, estructurarlas y convertirlas en requisitos funcionales que pudieran ser desarrollados y validados por los equipos técnicos.</p>
+      <p class="lead">Esto incluía:</p>
+      <ul class="two">
+        <li>Levantamiento y análisis de necesidades.</li>
+        <li>Definición de KPIs y reglas de negocio.</li>
+        <li>Creación de User Stories y Acceptance Criteria en Azure DevOps.</li>
+        <li>Coordinación con equipos de Data, Product, eCommerce y Technology.</li>
+        <li>Seguimiento del desarrollo y resolución de dudas funcionales.</li>
+        <li>Validación de que los datos y resultados representaran correctamente la realidad del negocio.</li></ul>
+      <p class="close">Mi papel no era programar cada capa, sino asegurar que cada capa respondiera a una necesidad de negocio y que el resultado final pudiera utilizarse para tomar decisiones.</p></div>
+  </div>
+
+  <div class="body">
+    <!-- 03 Problema -->
+    <section class="full"><h2>El problema</h2>
+      <p class="sub intro">La información existía, pero el proceso para convertirla en una visión común del negocio era complejo</p>
+      <div class="cols c3">
+        <div class="tile"><div class="tt">Datos dispersos</div>
+          <p>La información comercial procedía de diferentes fuentes, como CRM, eCommerce y otros sistemas internos.</p>
+          <p>Esto dificultaba disponer de una visión única y comparable del rendimiento comercial.</p></div>
+        <div class="tile"><div class="tt">Necesidades poco estructuradas</div>
+          <p>Las peticiones llegaban desde diferentes áreas y mercados, muchas veces expresadas como necesidades generales de información.</p>
+          <p>Antes de desarrollar una solución era necesario convertir esas peticiones en preguntas concretas, indicadores y reglas de negocio.</p></div>
+        <div class="tile"><div class="tt">El dato podía ser técnicamente correcto y no representar el negocio</div>
+          <p>Los equipos técnicos podían validar que la información se procesaba correctamente.</p>
+          <p>Pero eso no garantizaba que el resultado representara correctamente conceptos comerciales como ventas, conversión, productividad o rendimiento de producto.</p>
+          <p>Por eso era necesaria una validación funcional del dato, además de la validación técnica.</p></div>
+      </div></section>
+
+    <!-- 04 Gestión transversal -->
+    <section class="full"><h2>Gestión transversal</h2>
+      <p class="sub">Coordiné necesidades entre diferentes equipos, áreas y mercados para construir una visión común del producto</p>
+      <p>El proyecto implicaba trabajar con stakeholders de España, Inglaterra, Francia, Italia y equipos globales, pertenecientes a áreas como Product, Commercial, eCommerce, Data y Technology.</p>
+      <p><strong>Más de 20 stakeholders y 5 áreas</strong> participaban en diferentes fases del proyecto, cada uno con necesidades, prioridades y perspectivas diferentes.</p>
+      <p>Mi función era alinear esas perspectivas y convertirlas en una definición común de:</p>
+      <div class="flow mini">
+        <div class="step"><div class="tool">Qué necesitaba el negocio</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">Qué debía medir</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">Cómo debía calcularse</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">Cómo debía implementarse</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">Cómo debía validarse</div></div>
+      </div>
+      <p>Esto requería gestionar feedback de diferentes mercados, resolver ambigüedades y mantener una visión funcional común para que la solución pudiera ser utilizada de forma consistente.</p>
+      <p class="close center">Different markets → Different needs → One common definition</p></section>
+
+    <!-- 05 Cómo transformé el proceso -->
+    <section class="full stack"><h2>Cómo transformé el proceso</h2>
+      <p class="sub">De una petición de información a una solución funcional validada por negocio</p>
+      <p class="intro">El proceso comenzaba con una necesidad comercial que debía ser entendida y estructurada.</p>
+      <div class="flow five">
+        <div class="step"><div class="tool">Entender la necesidad</div><div class="what">Analizaba qué decisión de negocio había detrás de cada petición y qué información era realmente necesaria para tomarla.</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">Convertirla en requisitos</div><div class="what">Transformaba esa necesidad en User Stories, Acceptance Criteria, KPIs y reglas de negocio, documentados en Azure DevOps.</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">Alinear negocio y tecnología</div><div class="what">Trabajaba con los equipos técnicos para asegurar que los requisitos fueran comprensibles, medibles y técnicamente viables.</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">Validar el dato</div><div class="what">Además de comprobar el procesamiento técnico, contrastaba los resultados con el negocio para asegurar que los indicadores representaran correctamente la realidad comercial.</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">Convertir la información en una herramienta de decisión</div><div class="what">El resultado final se materializaba en dashboards y soluciones de reporting que permitían consultar los indicadores de forma estructurada y recurrente.</div></div>
+      </div>
+    </section>
+
+    <!-- 06 Flujo de información -->
+    <section class="full stack"><h2>Flujo de información</h2>
+      <p class="sub intro">De múltiples fuentes a indicadores de negocio</p>
+      <div class="flow seven">
+        <div class="step"><div class="tool">Salesforce / eCommerce / otras fuentes</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">APIs / Data ingestion</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">Data Lake</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">Pegasus / Data processing</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">Datamart</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="tool">Power BI</div></div>
+        <div class="arrow">→</div>
+        <div class="step end"><div class="tool">Business decisions</div></div>
+      </div>
+      <p class="close center">La arquitectura permitía centralizar la información, aplicar procesos de limpieza y transformación y convertir los datos en indicadores utilizables por el negocio.</p>
+    </section>
+
+    <!-- 07 Qué permitió hacer -->
+    <section class="full"><h2>Qué permitió hacer</h2>
+      <p class="sub">De analizar datos a mejorar decisiones comerciales</p>
+      <p class="intro">La solución permitió trabajar con una visión común del rendimiento comercial y responder preguntas que anteriormente requerían diferentes fuentes o procesos manuales.</p>
+      <div class="cols c5">
+        <div class="tile"><div class="tt">Performance comercial</div><p>Analizar indicadores como ventas, GWP, YTD y evolución comercial.</p></div>
+        <div class="tile"><div class="tt">Conversión</div><p>Analizar el recorrido desde la propuesta hasta la aceptación y detectar oportunidades de mejora.</p></div>
+        <div class="tile"><div class="tt">Productividad</div><p>Dar visibilidad sobre el rendimiento de equipos y procesos comerciales.</p></div>
+        <div class="tile"><div class="tt">Portfolio</div><p>Analizar el comportamiento de productos y servicios y detectar diferencias entre mercados.</p></div>
+        <div class="tile"><div class="tt">Comparabilidad</div><p>Utilizar KPIs y reglas de negocio comunes para facilitar la comparación entre regiones.</p></div>
+      </div></section>
+
+    <!-- 08 Resultados e impacto -->
+    <section class="full"><h2>Resultados e impacto</h2>
+      <p class="sub intro">Una misma información para diferentes mercados y una forma más estructurada de utilizarla</p>
+      <div class="cols c2">
+        <div class="tile hl"><div class="tt"><b>2</b> dashboards desarrollados</div><p>Se desarrollaron dos dashboards para el Global Product Owner, proporcionando una visión estructurada del rendimiento comercial y de producto.</p></div>
+        <div class="tile"><div class="tt">KPIs y reglas de negocio comunes</div><p>La definición funcional de indicadores permitió establecer una referencia común para diferentes equipos y mercados.</p></div>
+        <div class="tile"><div class="tt">Menos dependencia del reporting manual</div><p>Determinados informes que podían requerir alrededor de 5 días de preparación pasaron a estar disponibles mediante soluciones automatizadas de reporting.</p></div>
+        <div class="tile"><div class="tt">Mayor capacidad de análisis</div><p>Los equipos pudieron acceder a información estructurada para analizar rendimiento, detectar desviaciones y orientar decisiones comerciales.</p></div>
+      </div>
+      <p class="sub" style="margin-top:18px">De diferentes interpretaciones a una visión común</p>
+      <p>El principal cambio no fue únicamente tecnológico. Fue pasar de:</p>
+      <div class="cmpset">
+        <div class="cmp"><span class="cl">Antes</span><div class="chips"><span class="cf">Datos dispersos</span><span class="plus">+</span><span class="cf">Criterios diferentes</span><span class="plus">+</span><span class="cf">Trabajo manual</span></div></div>
+        <div class="cmp after"><span class="cl">Después</span><div class="chips"><span class="cf">Datos centralizados</span><span class="plus">+</span><span class="cf">Reglas comunes</span><span class="plus">+</span><span class="cf">Indicadores reutilizables</span></div></div>
+      </div></section>
+
+    <!-- 09 Aprendizaje -->
+    <section class="full"><h2>Aprendizaje</h2>
+      <div class="concl">
+        <p><strong>El valor del Business Analyst está en conseguir que negocio y tecnología compartan la misma definición del problema y del resultado esperado.</strong></p>
+        <p>En este proyecto aprendí que disponer de buenos datos no es suficiente.</p>
+        <p>El verdadero valor aparece cuando alguien consigue entender la necesidad de negocio, traducirla a una solución funcional y asegurar que el resultado final sea realmente útil para decidir.</p>
+        <p>Mi papel fue precisamente <strong>conectar esas dos realidades</strong>: la necesidad del negocio y la capacidad de la tecnología para resolverla.</p>
+      </div></section>
+  </div>
+
+  <footer>
+    <span>Agustín Mangialavori · Business Data Analysis · Proyecto: sep 2023 – ene 2025</span>
+  </footer>
+</div>
+</body>
+</html>
